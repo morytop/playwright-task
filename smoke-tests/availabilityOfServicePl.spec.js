@@ -1,6 +1,6 @@
 const {test} = require('@playwright/test');
 
-test.afterEach(async ({ page}) => {
+test.afterEach(async ({ page }) => {
     await page.waitForResponse(response => response.status() === 200);
 });
 
