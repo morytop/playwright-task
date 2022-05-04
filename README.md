@@ -2,12 +2,11 @@
 
 End-to-end test automation project for Znany Lekarz site using `JavaScript` and `Playwright` [https://playwright.dev/](https://playwright.dev/).
 
-I used Page Object Model and environment variables (process.env in node)
+I use Page Object Model and environment variables (process.env in node). Configuration allows you to run tests on different browsers and devices including mobile ones.
 
 Scenarios:
 
-* Choose specialization + location from search box dropdown using data from
-endpoint
+* Choose specialization + location from search box dropdown using data from endpoint
 * Go to the listing page
 * Make sure you are on the correct listing: check if calendar is loaded properly
 * Select (from any calendar) free slot and check if booking page for selected slot is loaded properly
