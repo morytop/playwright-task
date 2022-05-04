@@ -4,7 +4,6 @@ const {
 
 const config = {
   use: {
-    locale: 'pl-PL',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'retain-on-failure',
@@ -53,6 +52,18 @@ const config = {
       name: 'tablet-chrome',
       use: {
         ...devices['Nexus 10']
+      },
+    },
+    {
+      name: 'PL',
+      use: {
+        baseURL: 'https://www.znanylekarz.pl/'
+      },
+    },
+    {
+      name: 'ES',
+      use: {
+        baseURL: 'https://www.doctoralia.es'
       },
     },
   ],

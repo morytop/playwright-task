@@ -5,3 +5,6 @@ playwright-report/
 screenshots/*.png
 screenshots/*.webm
 screenshots/*.zip
+yarn-error.log
+yarn.lock
+package-lock.json

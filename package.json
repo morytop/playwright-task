@@ -4,20 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "smoke-tests": " npx playwright test smoke-tests/",
-    "smoke-tests:browsers": "  npx playwright test smoke-tests/ --headed",
-    "smoke-tests:ch": "  npx playwright test smoke-tests/ --debug --project=chromium",
-    "smoke-tests:ff": "  npx playwright test smoke-tests/ --debug --project=firefox",
-    "smoke-tests:wk": "  npx playwright test smoke-tests/ --debug --project=webkit",
-    "smoke-tests:mobile": "  npx playwright test smoke-tests/ --project=mobile-safari --project=mobile-chrome --project=tablet-safari --project=tablet-chrome",
-    "smoke-tests:mobile-browsers": "  npx playwright test smoke-tests/ --debug --project=mobile-safari --project=mobile-chrome --project=tablet-safari --project=tablet-chrome",
-    "regression-tests": "  npx playwright test regression-tests/",
-    "regression-tests:browsers": "  npx playwright test regression-tests/ --headed",
-    "regression-tests:ch": "  npx playwright test regression-tests/ --debug --project=chromium",
-    "regression-tests:ff": "  npx playwright test regression-tests/ --debug --project=firefox",
-    "regression-tests:wk": "  npx playwright test regression-tests/ --debug --project=webkit",
-    "regression-tests:mobile": "  npx playwright test regression-tests/ --project=mobile-safari --project=mobile-chrome --project=tablet-safari --project=tablet-chrome",
-    "regression-tests:mobile-browsers": "  npx playwright test regression-tests/ --debug --project=mobile-safari --project=mobile-chrome --project=tablet-safari --project=tablet-chrome",
+    "tests": "env-cmd -f dev.env npx playwright test tests/",
+    "tests:browsers": "env-cmd -f dev.env  npx playwright test tests/ --headed",
+    "tests:ch": "env-cmd -f dev.env npx playwright test tests/ --debug --project=chromium",
+    "tests:ff": "env-cmd -f dev.env  npx playwright test tests/ --debug --project=firefox",
+    "tests:wk": "env-cmd -f dev.env  npx playwright test tests/ --debug --project=webkit",
+    "tests:mobile": "env-cmd -f dev.env  npx playwright test tests/ --project=mobile-safari --project=mobile-chrome --project=tablet-safari --project=tablet-chrome",
+    "tests:mobile-browsers": "env-cmd -f dev.env  npx playwright test tests/ --debug --project=mobile-safari --project=mobile-chrome --project=tablet-safari --project=tablet-chrome",
     "devices:list": "npx playwright test helpers/devices.spec.js"
   },
   "repository": {
@@ -36,5 +29,10 @@
   "devDependencies": {
     "@cucumber/playwright": "^3.1.0",
     "@playwright/test": "^1.19.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "env-cmd": "^10.1.0",
+    "request": "^2.88.2"
   }
 }
